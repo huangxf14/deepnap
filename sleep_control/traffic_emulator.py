@@ -161,8 +161,8 @@ class TrafficEmulator(object):
         for idx in incoming_sessions.index:
             # 'bytes_per_request_domain' column
             domains = incoming_sessions.get_value(idx, 'domains').split(';')
-            bytes_domain = map(int, incoming_sessions.get_value(idx, 'bytesByDomain').split(';'))
-            requests_domain = map(int, incoming_sessions.get_value(idx, 'requestsByDomain').split(';'))
+            bytes_domain = map(int, str(incoming_sessions.get_value(idx, 'bytesByDomain')).split(';'))
+            requests_domain = map(int, str(incoming_sessions.get_value(idx, 'requestsByDomain')).split(';'))
             bytes_request_domain = {
                 domains[i]: self.allocate_bytes_in_req(bytes_domain[i], requests_domain[i])
                 for i in range(len(domains))

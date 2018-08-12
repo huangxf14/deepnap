@@ -40,7 +40,7 @@ class Dyna_QAgentNN(DynaMixin, QAgentNN):
 
 # load from processed data
 session_df =pd.read_csv(
-    filepath_or_buffer='../data/trace_dh3.dat',
+    filepath_or_buffer='../data/coarse.csv',
     parse_dates=['startTime_datetime', 'endTime_datetime']
 )
 
@@ -82,9 +82,9 @@ num_sim = 1
 
 # |- Env
 #    |- Time
-start_time = pd.to_datetime("2014-10-15 09:40:00")
-total_time = pd.Timedelta(hours=2)
-time_step = pd.Timedelta(seconds=2)
+start_time = pd.to_datetime("2016-04-20 14:40:00")
+total_time = pd.Timedelta(hours=28)
+time_step = pd.Timedelta(minutes=1)
 backoff_epochs = num_buffer*memory_size+phi_length
 head_datetime =  start_time - time_step*backoff_epochs
 tail_datetime = head_datetime + total_time

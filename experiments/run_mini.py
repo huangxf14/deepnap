@@ -15,9 +15,10 @@ n_process_exp = 2
 n_process_idx = 1
 exp_configs = [
     # (file, num_sim, num_log)
-    ('experiment_DynaQNN_Feb15_2200_mini.py', 1, 2),
-    ('experiment_DynaQtable_Feb15_2300_mini.py', 1, 1),
-    ('experiment_phiNN_Feb15_2400_mini.py', None, 2),
+    # ('experiment_DynaQNN_Feb15_2200_mini.py', 1, 2),
+    ('experiment_DynaQNN_Aug05_00_mini.py', 1, 1),
+    #('experiment_DynaQtable_Feb15_2300_mini.py', 1, 1),
+    #('experiment_phiNN_Feb15_2400_mini.py', None, 2),
 ]
 
 #############################################################
